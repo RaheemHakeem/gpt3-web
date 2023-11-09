@@ -4,6 +4,25 @@ import { blog01, blog02, blog03, blog04, blog05 } from "./imports";
 import "./blog.css";
 
 const Blog = () => {
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const date = new Date();
+  let day = date.getDate();
+  let m = month[date.getMonth()];
+  let year = date.getFullYear();
+  let currentDate = `${m} ${day}, ${year}`;
   return (
     <div className="gpt3__blog section__padding" id="blog">
       <div className="gpt3__blog-heading">
@@ -13,13 +32,33 @@ const Blog = () => {
       </div>
       <div className="gpt3__blog-container">
         <div className="gpt3__blog-container_groupA">
-          <Article imgUrl={blog01} />
+          <Article
+            imgUrl={blog01}
+            date={currentDate}
+            title="GPT-3 and Open  AI is the future. Let us exlore how it is?"
+          />
         </div>
         <div className="gpt3__blog-container_groupB">
-          <Article imgUrl={blog02} />
-          <Article imgUrl={blog03} />
-          <Article imgUrl={blog04} />
-          <Article imgUrl={blog05} />
+          <Article
+            imgUrl={blog02}
+            date={currentDate}
+            title="GPT-3 and Open  AI is the future. Let us exlore how it is?"
+          />
+          <Article
+            imgUrl={blog03}
+            date={currentDate}
+            title="GPT-3 and Open  AI is the future. Let us exlore how it is?"
+          />
+          <Article
+            imgUrl={blog04}
+            date={currentDate}
+            title="GPT-3 and Open  AI is the future. Let us exlore how it is?"
+          />
+          <Article
+            imgUrl={blog05}
+            date={currentDate}
+            title="GPT-3 and Open  AI is the future. Let us exlore how it is?"
+          />
         </div>
       </div>
     </div>
